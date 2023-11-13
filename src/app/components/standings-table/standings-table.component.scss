@@ -1,0 +1,25 @@
+.standings-container {
+  &__loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__table {
+    border-collapse: collapse;
+    width: 100%;
+
+    th, td {
+      text-align: center;
+      border: 0.5px solid gray;
+    }
+
+    th {
+      padding: 10px;
+    }
+
+    img {
+      max-width: 60px;
+    }
+  }
+}

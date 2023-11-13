@@ -1,0 +1,10 @@
+<div class="league-information-page">
+  <section class="league-information-page__header">
+    <h1 class="league-information-page__header__title">Football updates</h1>
+    <app-header (newLeagueEvent)="getCurrentLeagueId($event)"></app-header>
+  </section>
+
+  <section class="league-information-page__body">
+    <app-standings-table [currentLeagueId]="currentLeagueId"></app-standings-table>
+  </section>
+</div>

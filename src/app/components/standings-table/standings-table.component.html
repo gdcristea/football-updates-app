@@ -1,0 +1,36 @@
+<div class="standings-container">
+  <div class="standings-container__loader">
+    <app-loader *ngIf="isLoading; else standingsTable"></app-loader>
+  </div>
+  <ng-template #standingsTable>
+    <table class="standings-container__table">
+      <tr>
+        <th></th>
+        <th></th>
+        <th>Name</th>
+        <th>Games</th>
+        <th>W</th>
+        <th>L</th>
+        <th>D</th>
+        <th>Goal Difference</th>
+        <th>Points</th>
+      </tr>
+      <tr *ngFor="let team of standings; index as i">
+        <td>{{i + 1}}</td>
+        <td><img [src]="team.team.logo" alt="logo"></td>
+        <td
+          style="cursor: pointer"
+          (click)="navigateToFixture(team.team.id)">
+          {{team.team.name}}
+        </td>
+        <td>{{team.all.played}}</td>
+        <td>{{team.all.win}}</td>
+        <td>{{team.all.lose}}</td>
+        <td>{{team.all.draw}}</td>
+        <td>{{team.goalsDiff}}</td>
+        <td>{{team.points}}</td>
+      </tr>
+    </table>
+  </ng-template>
+</div>
+

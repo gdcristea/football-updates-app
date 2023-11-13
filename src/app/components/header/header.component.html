@@ -1,0 +1,9 @@
+<div class="header">
+  <button
+    *ngFor="let league of leagues; index as i;"
+    [class.active]="activeButtonIndex === i"
+    [id]="league.buttonId + 'Select'"
+    (click)="onSelectLeague(league.apiLeagueId, i)">
+    {{league.name}}
+  </button>
+</div>

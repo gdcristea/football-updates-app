@@ -1,0 +1,43 @@
+.team-container {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  margin: 0 auto;
+
+  &__loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td {
+      text-align: center;
+      border: 0.5px solid gray;
+    }
+
+    img {
+      max-width: 60px;
+    }
+  }
+
+  &__back-btn {
+    background-color: coral;
+    padding: 15px 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    border-radius: 10px;
+  }
+}
